@@ -3,21 +3,20 @@
 <head>
 <title>Table V03</title>
 <meta charset="UTF-8">
-<script src="sorttable.js"></script>
+
+<script src='tablesort.js'></script>
+
 <link rel="stylesheet" type="text/css" href="css/util.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 
 <div class="limiter">
-
-
-
 <div class="container-table100">
 <div class="wrap-table100">
 <div class="table100 ver1">
 
-<table class="sortable" data-vertable="ver5">
+<table id="sort" class="sort" data-vertable="ver5">
 <thead>
 <tr class="row100 head">
 <th>Codename</th>
@@ -143,10 +142,15 @@
 
 </tbody>
 </table>
+
 </div>
 </div>
 </div>
 </div>
+
+<script>
+  new Tablesort(document.getElementById('sort'));
+</script>
 
 </body>
 </html>
