@@ -1,162 +1,121 @@
-<script>alert(1)<script>
+<script src="sorttable.js"></script>
+<style>
+thead {color:green;}
+tbody {color:black;}
+tfoot {color:red;}
+table,th,td
+{
+border:1px solid black;
+}
+th:hover{
+cursor:pointer;
+background:#AAA;
 
-<table id="myTable2">
+   }
+</style>
+
+<table class="sortable">
 <tr>
 <!--When a header is clicked, run the sortTable function, with a parameter,
-0 for sorting by names, 1 for sorting by country: -->
-<th onclick="sortTable(0)">Codename</th>
-<th onclick="sortTable(1)">Manufacturer</th>
-<th onclick="sortTable(2)">Modell</th>
-<th onclick="sortTable(3)">Price</th>
-<th onclick="sortTable(4)">Links</th>
-</tr>
-<tr>
-<th> athene </th>
-<th>  Plus  </th>
-<th>  Moto G4  </th>
-<tr>
-</tr>
-<th> bullhead </th>
-<th>  Google  </th>
-<th>  Nexus 5X  </th>
-<tr>
-</tr>
-<th> chiron </th>
-<th>  2  </th>
-<th> Mi </th>
-<tr>
-</tr>
-<th> ether </th>
-<th>  Nextbit  </th>
-<th>  Robin  </th>
-<tr>
-</tr>
-<th> find7op </th>
-<th>  Oneplus  </th>
-<th>  One  </th>
-<tr>
-</tr>
-<th> gemini </th>
-<th>  Xiaomi  </th>
-<th>  Mi 5  </th>
-<tr>
-</tr>
-<th> gts210vewifi </th>
-<th>  S2  </th>
-<th>  Galaxy Tab  </th>
-<tr>
-</tr>
-<th> kagura </th>
-<th>  Sony  </th>
-<th>  Xperia XZ  </th>
-<tr>
-</tr>
-<th> kenzo </th>
-<th>  Xiaomi  </th>
-<th>  Redmi 3 Pro  </th>
-<tr>
-</tr>
-<th> keyaki </th>
-<th>  Sony  </th>
-<th>  Xperia XZs  </th>
-<tr>
-</tr>
-<th> kugo </th>
-<th>  Sony  </th>
-<th>  Xperia X Compact  </th>
-<tr>
-</tr>
-<th> mido </th>
-<th>  Xiaomi  </th>
-<th>  Redmi Note 4  </th>
-<tr>
-</tr>
-<th> oneplus3 </th>
-<th>  Oneplus  </th>
-<th>  3/3T  </th>
-<tr>
-</tr>
-<th> oneplus5 </th>
-<th>  Oneplus  </th>
-<th>  5  </th>
-<tr>
-</tr>
-<th> oneplus5t </th>
-<th>  Oneplus  </th>
-<th>  5T  </th>
-<tr>
-</tr>
-<th> potter </th>
-<th>  Motorola  </th>
-<th>  Moto G5 Plus  </th>
-<tr>
-</tr>
-<th> sagit </th>
-<th>  Xiaomi  </th>
-<th>  Mi 6  </th>
-<tr>
-</tr>
-<th> suzu </th>
-<th>  Sony  </th>
-<th>  Xperia X  </th>
-</tr>
+	0 for sorting by names, 1 for sorting by country: -->
+	<th> Codename</th>
+	<th> Manufacturer</th>
+	<th> Modell</th>
+	<th> Price</th>
+	<th> Links</th>
+	</tr>
+	<tr>
+	<th> athene </th>
+	<th>  Plus  </th>
+	<th>  Moto G4  </th>
+	<tr>
+	</tr>
+	<th> bullhead </th>
+	<th>  Google  </th>
+	<th>  Nexus 5X  </th>
+	<tr>
+	</tr>
+	<th> chiron </th>
+	<th>  2  </th>
+	<th> Mi </th>
+	<tr>
+	</tr>
+	<th> ether </th>
+	<th>  Nextbit  </th>
+	<th>  Robin  </th>
+	<tr>
+	</tr>
+	<th> find7op </th>
+	<th>  Oneplus  </th>
+	<th>  One  </th>
+	<tr>
+	</tr>
+	<th> gemini </th>
+	<th>  Xiaomi  </th>
+	<th>  Mi 5  </th>
+	<tr>
+	</tr>
+	<th> gts210vewifi </th>
+	<th>  S2  </th>
+	<th>  Galaxy Tab  </th>
+	<tr>
+	</tr>
+	<th> kagura </th>
+	<th>  Sony  </th>
+	<th>  Xperia XZ  </th>
+	<tr>
+	</tr>
+	<th> kenzo </th>
+	<th>  Xiaomi  </th>
+	<th>  Redmi 3 Pro  </th>
+	<tr>
+	</tr>
+	<th> keyaki </th>
+	<th>  Sony  </th>
+	<th>  Xperia XZs  </th>
+	<tr>
+	</tr>
+	<th> kugo </th>
+	<th>  Sony  </th>
+	<th>  Xperia X Compact  </th>
+	<tr>
+	</tr>
+	<th> mido </th>
+	<th>  Xiaomi  </th>
+	<th>  Redmi Note 4  </th>
+	<tr>
+	</tr>
+	<th> oneplus3 </th>
+	<th>  Oneplus  </th>
+	<th>  3/3T  </th>
+	<tr>
+	</tr>
+	<th> oneplus5 </th>
+	<th>  Oneplus  </th>
+	<th>  5  </th>
+	<tr>
+	</tr>
+	<th> oneplus5t </th>
+	<th>  Oneplus  </th>
+	<th>  5T  </th>
+	<tr>
+	</tr>
+	<th> potter </th>
+	<th>  Motorola  </th>
+	<th>  Moto G5 Plus  </th>
+	<tr>
+	</tr>
+	<th> sagit </th>
+	<th>  Xiaomi  </th>
+	<th>  Mi 6  </th>
+	<tr>
+	</tr>
+	<th> suzu </th>
+	<th>  Sony  </th>
+	<th>  Xperia X  </th>
+	</tr>
 
 
-</table>
+	</table>
 
-<script>
-function sortTable(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById("myTable2");
-  switching = true;
-  // Set the sorting direction to ascending:
-  dir = "asc";
-  /* Make a loop that will continue until
-  no switching has been done: */
-  while (switching) {
-    // Start by saying: no switching is done:
-    switching = false;
-    rows = table.getElementsByTagName("TR");
-    /* Loop through all table rows (except the
-    first, which contains table headers): */
-    for (i = 1; i < (rows.length - 1); i++) {
-      // Start by saying there should be no switching:
-      shouldSwitch = false;
-      /* Get the two elements you want to compare,
-      one from current row and one from the next: */
-      x = rows[i].getElementsByTagName("TD")[n];
-      y = rows[i + 1].getElementsByTagName("TD")[n];
-      /* Check if the two rows should switch place,
-      based on the direction, asc or desc: */
-      if (dir == "asc") {
-        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          // If so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-      } else if (dir == "desc") {
-        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          // If so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      /* If a switch has been marked, make the switch
-      and mark that a switch has been done: */
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      // Each time a switch is done, increase this count by 1:
-      switchcount ++;
-    } else {
-      /* If no switching has been done AND the direction is "asc",
-      set the direction to "desc" and run the while loop again. */
-      if (switchcount == 0 && dir == "asc") {
-        dir = "desc";
-        switching = true;
-      }
-    }
-  }
-}
-</script>
+
